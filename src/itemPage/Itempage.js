@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Button, Col, Form, Container, Row } from 'react-bootstrap';
-import history from './../history';
-// import "./Home.css";
 import Sidenav from '../Home/components/Sidenav';
 import Summary from '../Customize/Summary';
 import Toolbar from '../Home/components/Toolbar';
@@ -90,113 +88,85 @@ export default class Itempage extends Component {
                     </Container>
                     <Form>
                         <Container className="form mx-auto">
-                            <Row>
-                                <Col>
-                                    <Form.Label><h5>Get designer home</h5> </Form.Label>
-                                </Col>
-                                <Col align="right">
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column><h5>Get designer home</h5> </Form.Label>
+                                <Col align='right'>
                                     <input type="checkbox" value="getdes" name="getdesigner" />
                                 </Col>
-                            </Row>
+                            </Form.Group>
                         </Container>
                         <Container className="form mx-auto">
-                            <Row>
-                                <Col>
-                                    <Form.Label><h5>Don't have the material</h5> </Form.Label>
-                                </Col>
-                                <Col align="right">
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column><h5>Don't have the material</h5> </Form.Label>
+                                <Col align='right'>
                                     <input type="radio" value="no-mat" name="material" defaultChecked />
                                 </Col>
-                            </Row>
+                            </Form.Group>
                         </Container>
                         <Container className="form mx-auto">
-                            <Row>
-                                <Col>
-                                    <Form.Label><h5>Have the material</h5> </Form.Label>
-                                </Col>
-                                <Col align="right">
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column><h5>Have the material</h5> </Form.Label>
+                                <Col align='right'>
                                     <input type="radio" value="mat" name="material" />
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Mobile Number: </Form.Label>
                                 <Col>
-                                    <Form.Label>Mobile Number: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control type="digit" />
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Email ID: </Form.Label>
                                 <Col>
-                                    <Form.Label>Email ID: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control type="email" />
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Address: </Form.Label>
                                 <Col>
-                                    <Form.Label>Address: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control type="textarea" rows="1" />
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>City: </Form.Label>
                                 <Col>
-                                    <Form.Label>City: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control as="select" placeholder="Select city">
                                         <option>Select City</option>
                                         <option>2</option>
                                         <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
                                     </Form.Control>
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>State: </Form.Label>
                                 <Col>
-                                    <Form.Label>State: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control as="select">
                                         <option>Select State</option>
                                         <option>2</option>
                                         <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
                                     </Form.Control>
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Country: </Form.Label>
                                 <Col>
-                                    <Form.Label>Country: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control as="select">
                                         <option>Select Country</option>
                                         <option>2</option>
                                         <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
                                     </Form.Control>
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Pincode: </Form.Label>
                                 <Col>
-                                    <Form.Label>Pincode: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control type="textarea" />
                                 </Col>
-                            </Row>
-                            <Row className="field">
+                            </Form.Group>
+                            <Form.Group as={Row} className="field">
+                                <Form.Label column>Quantity: </Form.Label>
                                 <Col>
-                                    <Form.Label>Quantity: </Form.Label>
-                                </Col>
-                                <Col align="right">
                                     <Form.Control as="select">
                                         <option>Select Quantity</option>
                                         <option>2</option>
@@ -205,7 +175,7 @@ export default class Itempage extends Component {
                                         <option>5</option>
                                     </Form.Control>
                                 </Col>
-                            </Row>
+                            </Form.Group>
                         </Container>
                         <Button id="post" variant="secondary" type="submit" block>Post</Button>
                     </Form>

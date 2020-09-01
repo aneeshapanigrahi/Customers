@@ -100,7 +100,7 @@
     background-color: #e8dee7;
     margin: 2em;
     width: 40em !important;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
     padding-top: 5px;
     padding-bottom: 4px;
 }

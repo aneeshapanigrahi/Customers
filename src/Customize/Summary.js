@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-// import axios from 'axios'
+import { connect } from 'react-redux';
 
 class Summary extends React.Component {
     render() {
@@ -9,10 +9,16 @@ class Summary extends React.Component {
                 <Container fluid className="summary" >
                     <h5 style={{ marginBottom: "1em", marginTop: "2em", fontWeight: "bolder" }}> Customization Summary: </h5>
                     <p><strong>Item:</strong> {this.props.value} </p>
-                    <p><strong>Size:</strong> {this.props.size} </p>
+                    <p><strong>Size:</strong> {this.props.radioValue} </p>
                 </Container>
             </div>
         );
     }
 }
-export default Summary;
+
+const mapStateToProps = (state) => {
+    return { radioValue: state.selectedradioValue }
+
+}
+
+export default connect(mapStateToProps)(Summary);
